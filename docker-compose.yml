@@ -1,0 +1,25 @@
+version: "3.9"
+services:
+  frontend:
+    build:
+      context: ./client
+      dockerfile: Dockerfile.frontend
+    working_dir: /client
+    ports:
+      - "5173:5173"
+    depends_on:
+    - nodebackend
+    networks:
+      - app-network
+  nodebackend:
+    build:
+      context: ./server
+      dockerfile: Dockerfile.node
+    working_dir: /server
+    ports:
+      - "3000:3000"
+    networks:
+      - app-network
+networks:
+    app-network:
+        driver: bridge
