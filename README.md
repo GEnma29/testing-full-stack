@@ -13,6 +13,12 @@ steps
 - ```cd server```
 - ```npm start```
 -  go [here](http://localhost:3000/files/data)
+
 ![image](https://user-images.githubusercontent.com/53823068/206937075-321ff2bf-7b55-4821-8686-778bb8db5094.png)
+
+notes : 
+- the searchbar make the fecht when element lenght > 7
+- when element doesn't exist on list return all elements
+- when element exist but dont have info return menssage "this element exist but don't have info"
 
 
